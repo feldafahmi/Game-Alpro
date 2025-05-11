@@ -253,7 +253,6 @@ public class Main {
                     System.out.println("=====KAMU MENANG=====");
                     showEnding(true);
                 }
-                break;
             }
 
             isPlayerTurn = !isPlayerTurn;
