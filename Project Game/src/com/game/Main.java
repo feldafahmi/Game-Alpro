@@ -87,7 +87,7 @@ public class Main {
         System.out.println("\n===HOW TO PLAY====\n");
         System.out.print("""
                 1. Akan digenerate secara acak angka sebanyak n
-                2. Anda bisa memilih siapa terlebih dahulu bermain atau dipilih secara random
+                2. Akan dipilih secara random giliran bermain oleh komputer
                 3. Setiap pemain harus mengambil 1, 2, atau 3 batang pada setiap gilirannya
                 4. Pemain yang mengambil batang terakhir adalah pemain yang kalah
                 """);
@@ -234,13 +234,6 @@ public class Main {
                     ambil = batang - 1;
                 }
 
-                // Safety bound
-                if (ambil < 1)
-                    ambil = 1;
-                if (ambil > 3)
-                    ambil = 3;
-                if (ambil > batang)
-                    ambil = batang - 1;
                 System.out.println("\nKomputer mengambil " + ambil + " batang.");
             }
 
