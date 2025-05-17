@@ -3,8 +3,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
+         /*
+         Deskripsi fungsi:
+         Inisialisasi game, menampilkan welcome screen, dan menjalankan loop utama untuk menu.
+         */
+
         Scanner input = new Scanner(System.in);
-    boolean isRun = true;
+        boolean isRun = true;
 
         System.out.print("\n====WELCOME=====\n");
         System.out.println("The Last Stick - Ambatang's Challenge\n");
@@ -63,6 +68,18 @@ public class Main {
 
     // FUNCTION: main menu
     public static int menu(){
+
+         /*
+         Deskripsi fungsi:
+         Menampilkan menu utama dan membaca pilihan pengguna.
+
+         INPUT FUNGSI:
+         Tidak ada input eksplisit; fungsi membaca input dari Scanner.
+
+         OUTPUT FUNGSI:
+         int: nilai pilihan menu yang dimasukkan pengguna.
+         */
+
         Scanner input = new Scanner(System.in);
         int pilih;
         System.out.println("\n===== MENU =====\n");
@@ -78,12 +95,34 @@ public class Main {
 
     // FUNCTION: generate angka random
     public static int random(int max, int min){
+         /*
+         Deskripsi fungsi:
+         Menghasilkan bilangan bulat acak di antara nilai min dan max.
+
+         INPUT FUNGSI:
+         max (int): batas atas rentang acak.
+         min (int): batas bawah rentang acak.
+
+         OUTPUT FUNGSI:
+         int: bilangan acak antara min dan max.
+         */
+
         int num = (int)(Math.random() * (max - min + 1)) + min;
         return num;
     }
 
     // Function: How to play
     public static void howToPlay(){
+         /*
+         Deskripsi fungsi:
+         Menampilkan petunjuk cara bermain permainan Misere Nim (aturan).
+
+         INPUT FUNGSI:
+         void (tidak ada parameter).
+
+         OUTPUT FUNGSI:
+         void (hanya mencetak teks ke output).
+         */
         System.out.println("\n===HOW TO PLAY====\n");
         System.out.print("""
                 1. Akan digenerate secara acak angka sebanyak n
@@ -95,6 +134,16 @@ public class Main {
 
     // FUNCTION: Prolog
     public static void showPrologue() {
+         /*
+         Deskripsi fungsi:
+         Menampilkan cerita pendahuluan (prologue) untuk latar permainan.
+
+         INPUT FUNGSI:
+         void (tidak ada parameter).
+
+         OUTPUT FUNGSI:
+         void (hanya mencetak teks ke output).
+         */
         System.out.println("PROLOGUE: The Last Stick - Ambatang's Challenge\n");
         System.out.println("""
     Di ujung sebuah negeri yang damai, terdapat sebuah desa kecil bernama Maju Mundur.
@@ -125,6 +174,16 @@ public class Main {
 
     // FUNCTION: Epilog
     public static void showEnding(boolean playerWon) {
+         /*
+         Deskripsi fungsi:
+         Menampilkan cerita penutup (epilogue) berdasarkan hasil permainan.
+
+         INPUT FUNGSI:
+         playerWon (boolean): true jika pemain menang, false jika kalah.
+
+         OUTPUT FUNGSI:
+         void (hanya mencetak teks ke output).
+         */
         System.out.println("\n🎬 EPILOGUE\n");
 
         if (playerWon) {
@@ -163,6 +222,16 @@ public class Main {
 
     // FUNCTION: gameplay
     public static void gameplay() {
+         /*
+         Deskripsi fungsi:
+         Menjalankan satu sesi permainan Misere Nim, mengatur jumlah batang, giliran, dan logika pengambilan.
+
+         INPUT FUNGSI:
+         void (meminta input dari scanner).
+
+         OUTPUT FUNGSI:
+         void (cetak alur permainan dan hasil akhir).
+         */
         Scanner input = new Scanner(System.in);
         System.out.println("\n===== Game Start =====\n");
 
@@ -261,6 +330,17 @@ public class Main {
 
 
     public static void dispbatang(int maxDisp) {
+         /*
+         Deskripsi fungsi:
+         Menampilkan representasi batang (spasi) sebanyak maxDisp.
+
+         INPUT FUNGSI:
+         maxDisp (int): jumlah batang yang akan ditampilkan.
+
+         OUTPUT FUNGSI:
+         void (mencetak spasi ke output sebagai visualisasi batang).
+         */
+
         while (maxDisp > 0) {
             System.out.print("🪵 ");
             maxDisp -= 1;
