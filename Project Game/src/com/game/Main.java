@@ -44,25 +44,25 @@ public class Main {
                 ⣿⣿⣿⣷⣿⣿⣿⣿⣿⣷⣶⣶⣾⣿⣿⣿⣯⣁⣀⡊⣘⣀⣀⣤⣿
                 """);
         
-    while (isRun){
-        int pilih = menu();
-        switch (pilih){
-            case 1:
-                gameplay();
-                break;
-            case 2:
-                showPrologue();
-                break;
-            case 3:
-                howToPlay();
-                break;
-            case 4:
-                isRun = false;
-                break;
-            default:
-                System.err.println("Input anda tidak ditemukan\nSilahkan pilih [1-3]");
+        while (isRun){
+            int pilih = menu();
+            switch (pilih){
+                case 1:
+                    gameplay();
+                    break;
+                case 2:
+                    showPrologue();
+                    break;
+                case 3:
+                    howToPlay();
+                    break;
+                case 4:
+                    isRun = false;
+                    break;
+                default:
+                    System.err.println("Input anda tidak ditemukan\nSilahkan pilih [1-3]");
+            }
         }
-    }
     }
 
 
