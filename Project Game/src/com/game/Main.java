@@ -235,11 +235,6 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("\n===== Game Start =====\n");
 
-        System.out.print("Masukkan batas atas: ");
-        int max = input.nextInt();
-        System.out.print("Masukkan batas bawah: ");
-        int min = input.nextInt();
-
         // Tentukan giliran pertama secara acak
         boolean isPlayerTurn = random(0, 1) == 1;
         if (isPlayerTurn == true)
@@ -252,7 +247,7 @@ public class Main {
         // - Jika Komputer mulai -> batang % 4 != 1 (komputer punya langkah pemenang)
         int batang;
         do {
-            batang = random(min, max);
+            batang = random(50, 10);
         } while (batang < 2     // minimal 2 batang supaya game bisa berjalan
                 || (isPlayerTurn  && batang % 4 != 1)
                 || (!isPlayerTurn && batang % 4 == 1));
